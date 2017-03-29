@@ -2,8 +2,12 @@
 	<head>
 		<title>M3T Desenvolvimento</title>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/mobyrise/mbr-additional.css">
+		<link rel="stylesheet" href="css/mobyrise/style.css">
+		<link rel="stylesheet" href="css/socicon.min.css">
 		<link href="http://fonts.googleapis.com/css?family=Arimo:400" rel="stylesheet">
 		<style type="text/css">
 			@font-face{
@@ -14,6 +18,11 @@
 			.textoBonito{
 			    font-family: "lobster";
 			    letter-spacing: 0px;
+			}
+
+			.collapsing {
+			    -webkit-transition: none;
+			    transition: none;
 			}
 
 			body {
@@ -39,10 +48,10 @@
 
 			.menu {
 			    width: 100%;
-			    padding: 30px 10px 50px;
+			    /*padding: 30px 10px 50px;*/
 			    margin: 0 auto;
 			    text-align: center;
-			    background-color: rgba(228,215,215,0.7);
+			    /*background-color: rgba(228,215,215,0.7);*/
 			}
 
 			.menu ul {
@@ -50,33 +59,33 @@
 			}
 
 			.menu a {
-			    color: #333; 
-			    text-transform: uppercase;
-			    opacity: 0.8;
+				text-decoration: none !important;
+			    color: #333 !important; 
+			    text-transform: uppercase !important;
+			    opacity: 0.8 !important;
 			}
 
 			.menu a:hover {
-			    text-decoration: none;
-			    opacity: 1;
+			    text-decoration: none !important;
+			    opacity: 1 !important;
 			}
 		</style>
 	</head>
 
 	<body background="image/back.png">
+		<a class="menu-bar" data-toggle="collapse" href="#menu">
+		    <span class="bars"></span>             
+		</a>
+		<div class="collapse menu" id="menu">
+		    <ul class="list-inline">
+		        <li><a href="#conteudo" onclick="carregaPagina('home.html');"><strong>Início</strong></a></li>
+		        <li><a href="#conteudo" onclick="carregaPagina('sobre.html');"><strong>Sobre</strong></a></li>
+		        <li><a href="#conteudo" onclick="carregaPagina('planos.html');"><strong>Planos</strong></a></li>
+		        <li><a href="#conteudo" onclick="carregaPagina('contato.html');"><strong>Contato</strong></a></li>
+		    </ul>   
+		</div>
 		<div class="container">
-			<a class="menu-bar" data-toggle="collapse" href="#menu">
-			    <span class="bars"></span>                
-		    </a>
-			<div class="collapse menu" id="menu">
-			    <ul class="list-inline">
-			        <li><a href="#"><strong>Início</strong></a></li>
-			        <li><a href="#"><strong>Sobre</strong></a></li>
-			        <li><a href="#"><strong>Planos</strong></a></li>
-			        <li><a href="#"><strong>Contato</strong></a></li>
-			    </ul>   
-		 	</div>
-
-			<div class="jumbotron" style="background: rgba(228,215,215,0.7);">
+			<!--<div class="jumbotron" style="background: rgba(255,255,255,0.7);">
 				<div class="row">
 					<center>
 						<img class="img img-responsive" src="image/m3t-logo.png">
@@ -84,41 +93,97 @@
 						<h1 class="textoBonito">M3T Desenvolvimento</h1>
 					</center>	
 				</div>
-			</div>
-			<!--
+			</div>-->
 			<div class="carousel slide" id="carousel-482428" style="left:0px;">
 	            <ol class="carousel-indicators">
 	                <li data-slide-to="0" data-target="#carousel-482428">
 	                </li>
 	                <li data-slide-to="1" data-target="#carousel-482428">
 	                </li>
-	                <li data-slide-to="2" data-target="#carousel-482428" class="active">
+	                <li data-slide-to="2" data-target="#carousel-482428">
+	                </li>
+	                <li data-slide-to="3" data-target="#carousel-482428">
 	                </li>
 	            </ol>
 	            <div class="carousel-inner">
 	                <div class="item">
-	                    <img alt="Imagem1" src="image/img1.png" />
+	                    <img alt="Imagem1" src="image/img1.jpg" />
 	                    <div class="carousel-caption">
 	                    </div>
 	                </div>
 	                <div class="item active left">
-	                    <img alt="Imagem2" src="image/img2.png" />
+	                    <img alt="Imagem2" src="image/img2.jpg" />
 	                    <div class="carousel-caption">
 	                    </div>
 	                </div>
 	                <div class="item next left">
-	                    <img alt="Imagem3" src="image/img3.png" />
+	                    <img alt="Imagem3" src="image/img3.jpg" />
+	                    <div class="carousel-caption">
+	                    </div>
+	                </div>
+	                <div class="item next left">
+	                    <img alt="Imagem4" src="image/img4.jpg" />
 	                    <div class="carousel-caption">
 	                    </div>
 	                </div>
 	            </div> <a class="left carousel-control" href="#carousel-482428" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-482428" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-	        </div>-->
+	        </div>
+
+	        <br>
+
+	        <div class="jumbotron" id="conteudo" style="background: rgba(255,255,255,0.7);">
+
+	        </div>
+
+
 		</div>
+
+		<!-- INÍCIO - Rodapé -->
+            <footer class="mbr-section mbr-section--relative mbr-section--fixed-size fields" id="footer1-91" style="background-color: rgb(68, 68, 68);width:100% !important;">
+                <br>
+                <div class="mbr-section__container container">
+                    <div class="row">						
+						<div class=" col-md-12">							
+							<center>
+								<div class="mbr-social-icons">
+					                <a href="http://fb.com/m3tdesenvolvimento" target="_blank">
+					                <div class="mbr-social-likes social-likes_style-1" data-counters="true">
+					                    <div class="mbr-social-icons__icon social-likes__icon facebook socicon-bg-facebook" title="Curta nossa página!">
+					                        <i class="socicon socicon-facebook"></i>
+					                        
+					                    </div>
+					                </div>
+					                </a>
+					            </div>
+				            </center>
+							    
+						</div>
+					</div>
+					
+					<div class="mbr-footer mbr-footer--wysiwyg row">
+                        <div class="col-sm-12">
+                            <p class="mbr-footer__copyright"></p>
+                            <p style="text-align: center;">Copyright (c) 2017 M3T Desenvolvimento</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- FIM - Rodapé -->
 
 
 
 
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			function carregaPagina(pagina){
+				$('#conteudo').load("views/" + pagina);
+			}
+
+			$(document).ready(function (){
+				carregaPagina('home.html');
+			});
+			
+		</script>
 	</body>
 </html>
