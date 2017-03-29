@@ -1,0 +1,9 @@
+@font-face{
+	font-family: "lobster";
+    src: url("../fonts/lobster.ttf")format("truetype");
+}
+
+.textoBonito{
+    font-family: "lobster";
+    letter-spacing: 0px;
+}
