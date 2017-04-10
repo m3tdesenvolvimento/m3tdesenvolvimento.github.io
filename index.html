@@ -39,11 +39,11 @@
 	                <div class="row">						
 						<div class=" col-md-12">							
 							<center>
-						        <a class="btn btn-primary btn-md" href="http://fb.com/m3tdesenvolvimento" target="_blank">
+						        <a class="btn btn-primary btn-md" style="border-radius: 50%; width: 32px;height: 32px;line-height: 18px;" href="http://fb.com/m3tdesenvolvimento" target="_blank">
 						           	<i class="socicon socicon-facebook"></i> 
 						        </a>  
 
-						        <a class="btn btn-success btn-md" href="http://github.com/m3tdesenvolvimento" target="_blank">
+						        <a class="btn btn-success btn-md" style="border-radius: 50%; width: 32px;height: 32px;line-height: 18px;" href="http://github.com/m3tdesenvolvimento" target="_blank">
 						           	<i class="socicon socicon-github"></i> 
 						        </a>           
 						    </center>           
@@ -77,13 +77,48 @@
 				$('#conteudo').load("views/" + pagina);
 			}
 
+			function mandaEmail(){
+				//Obtenho os dados digitados
+		        var nome = $("#nome").val();
+		        var telefone = $("#telefone").val();
+		        var email = $("#email").val();
+		        var empresa = $("#empresa").val();
+		        var mensagem = $("#mensagem").val();
+
+		        //Envio as informaçoes via Ajax para o php que processa o formulario
+		        $.ajax({
+		            type: "POST",
+		            url: "https://app-1491759796.000webhostapp.com/processa.php",
+		            data: {nome: nome,telefone: telefone,email: email,empresa: empresa, mensagem: mensagem},
+		     	    success: function(data){
+		                if(data != 0){
+		                    alert("Dados enviados com sucesso!");
+		                    console.info(data);
+		                }
+		                else{
+		                    alert("Ocorreu um erro na transmissão dos dados, aguarde e tente novamente.");
+		                    console.error(data);
+		                }
+		            },
+		            error: function(xhr,err){
+		                alert("Ocorreu um erro interno do servidor. Contate-nos através do nosso e-mail");
+		                console.error(err);
+		            }
+		        });
+
+		        document.getElementById("nome").value = "";
+		        document.getElementById("telefone").value = "";
+		        document.getElementById("email").value = "";
+		        document.getElementById("empresa").value = "";
+		        document.getElementById("mensagem").value = "";
+			}
+
 			$(document).ready(function (){
 				carregaPagina('home.html');
 
 				$("#carregando").css("display", "none");
 				$("#pagina_principal").css("display", "block");
 			});
-			
 		</script>
 	</body>
 </html>

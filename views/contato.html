@@ -1,10 +1,40 @@
 <div class="jumbotron" style="background: rgba(255,255,255,0.7);">
 	<div class="row">
 		<h1 align="center" class="textoUbuntu">Contato</h1>
+		<p class="textoUbuntu">
+			Entre em contatos conosco através do formulário ou através dos nossos contatos. Estamos sempre prontos a te atender da melhor forma possível!
+		</p>
 		<div class="col-md-6">
-			<p class="textoUbuntu">
-				Estamos aguardando ansiosamente pelo seu contato! Estamos sempre a postos para te atender da melhor forma possível, do jeito que você e a sua empresa merecem!
-			</p>
+			<form id="form_contato">
+				<fieldset>
+					<div class="form-group">
+	                    <input type="text" class="form-control" id="empresa" name="empresa" required="" placeholder="Empresa" data-form-field="Empresa">
+	                </div>
+
+		            <div class="form-group">
+		                <input type="text" class="form-control" id="nome" name="nome" required="" placeholder="Nome" data-form-field="Nome">
+		            </div>
+
+		            <div class="form-group">
+		                <input type="tel" class="form-control" id="telefone" name="telefone" required="" placeholder="Telefone" data-form-field="Telefone">
+		            </div>
+
+		            <div class="form-group">
+		                <input type="email" class="form-control" id="email" name="email" required="" placeholder="E-mail" data-form-field="E-mail">
+		            </div>
+
+		            <div class="form-group">
+		                <textarea class="form-control" id="mensagem" placeholder="Mensagem" required=""></textarea>
+		            </div>
+
+	                <div>
+		                <center>
+		                	<a class="btn btn-success btn-lg" id="enviar" onclick="mandaEmail();">Enviar</a>
+		                	<input class="btn btn-warning" type="reset" id="limpar" value="Limpar">
+		                </center>
+	                </div>
+				</fieldset>			
+            </form>
 		</div>
 
 		<div class="col-md-6">
